@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<!-- 
-  الافتراضي هو اللغة العربية
--->
 <html lang="ar" dir="rtl">
 
 <head>
@@ -9,33 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المتحف المصري الكبير | الافتتاح الكبير</title>
 
-    <!-- تحميل Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- تحميل الخطوط الملكية من جوجل -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=EB+Garamond:wght@400;500&display=swap"
         rel="stylesheet">
 
-    <!-- إعدادات Tailwind المخصصة -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        // خط العناوين الفخم
                         'display': ['Cinzel', 'serif'],
-                        // خط النصوص الكلاسيكي
                         'body': ['EB Garamond', 'serif'],
                     },
                     colors: {
-                        // لوحة الألوان الجديدة
-                        'gem-dark': '#0c1421', // كحلي داكن
-                        'gem-gold': '#D4AF37', // ذهبي ملكي
-                        'gem-ivory': '#FDFDFA', // عاجي (أبيض دافئ)
-                        'gem-sand': '#A39E8E', // رملي (للنصوص الفرعية)
+                        'gem-dark': '#0c1421',
+                        'gem-gold': '#D4AF37',
+                        'gem-ivory': '#FDFDFA',
+                        'gem-sand': '#A39E8E',
                     },
                     animation: {
                         'fade-in': 'fadeIn 1.5s ease-out'
@@ -46,7 +37,6 @@
                             '100%': { opacity: '1', transform: 'translateY(0)' },
                         }
                     },
-                    // لإضافة تأثير التوهج الذهبي
                     boxShadow: {
                         'gold-glow': '0 0 15px 5px rgba(212, 175, 55, 0.3)',
                     }
@@ -55,32 +45,23 @@
         }
     </script>
 
-    <!-- ستايل مخصص إضافي -->
     <style>
         body {
             background-color: #0c1421;
-            /* gem-dark */
             color: #FDFDFA;
-            /* gem-ivory */
             font-family: 'EB Garamond', serif;
-            /* font-body */
         }
 
-        /* ستايل زر اللغة النشط */
         .lang-btn.active {
             background-color: #D4AF37;
-            /* gem-gold */
             color: #0c1421;
-            /* gem-dark */
             font-weight: 600;
             border-color: #D4AF37;
         }
 
-        /* ستايل زر اللغة غير النشط */
         .lang-btn {
             background-color: transparent;
             color: #D4AF37;
-            /* gem-gold */
             border: 1px solid #D4AF37;
             transition: all 0.3s ease;
         }
@@ -89,30 +70,24 @@
             background-color: rgba(212, 175, 55, 0.1);
         }
 
-        /* ستايل العناوين الفخم */
         .section-title {
             font-family: 'Cinzel', serif;
-            /* font-display */
             color: #D4AF37;
-            /* gem-gold */
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 1rem;
         }
 
-        /* الزخرفة الهيروغليفية (خطوط بسيطة) */
         .section-title::before,
         .section-title::after {
             content: '';
             display: block;
             width: 4rem;
-            /* 64px */
             height: 2px;
             background: linear-gradient(to right, transparent, #D4AF37, transparent);
         }
 
-        /* فاصل زخرفي */
         .decorative-divider {
             width: 100%;
             text-align: center;
@@ -121,11 +96,8 @@
 
         .decorative-divider svg {
             width: 12rem;
-            /* 192px */
             height: 1rem;
-            /* 16px */
             stroke: #D4AF37;
-            /* gem-gold */
             stroke-width: 1;
             fill: none;
         }
@@ -134,10 +106,8 @@
 
 <body class="antialiased">
 
-    <!-- الحاوية الرئيسية -->
     <div class="container mx-auto max-w-6xl p-4 sm:p-8">
 
-        <!-- الهيدر: مبدل اللغة -->
         <header class="flex justify-start mb-8">
             <div class="flex space-x-2 rtl:space-x-reverse">
                 <button id="lang-ar-btn"
@@ -148,84 +118,65 @@
 
         <main>
 
-            <!-- 
-              القسم الرئيسي (بالعربية)
-            -->
             <section id="hero-ar" lang="ar" class="lang-block text-center animate-fade-in">
                 <h1 class="text-5xl sm:text-7xl font-display font-extrabold text-gem-gold mb-4">المتحف المصري الكبير
                 </h1>
                 <p class="text-2xl sm:text-3xl text-gem-ivory font-body mb-10">حفل الافتتاح الرسمي غداً</p>
 
-                <!-- العد التنازلي -->
                 <div id="countdown-ar" class="flex justify-center space-x-3 sm:space-x-4 rtl:space-x-reverse mb-12">
-                    <!-- أيام -->
                     <div class="border-2 border-gem-gold bg-gem-dark/30 p-4 sm:p-6 rounded-lg shadow-lg">
                         <div id="days-ar" class="text-4xl sm:text-6xl font-display font-bold">00</div>
                         <div class="text-sm sm:text-lg mt-2 text-gem-sand font-body">أيام</div>
                     </div>
-                    <!-- ساعات -->
                     <div class="border-2 border-gem-gold bg-gem-dark/30 p-4 sm:p-6 rounded-lg shadow-lg">
                         <div id="hours-ar" class="text-4xl sm:text-6xl font-display font-bold">00</div>
                         <div class="text-sm sm:text-lg mt-2 text-gem-sand font-body">ساعات</div>
                     </div>
-                    <!-- دقائق -->
                     <div class="border-2 border-gem-gold bg-gem-dark/30 p-4 sm:p-6 rounded-lg shadow-lg">
                         <div id="minutes-ar" class="text-4xl sm:text-6xl font-display font-bold">00</div>
                         <div class="text-sm sm:text-lg mt-2 text-gem-sand font-body">دقائق</div>
                     </div>
-                    <!-- ثوان -->
                     <div class="border-2 border-gem-gold bg-gem-dark/30 p-4 sm:p-6 rounded-lg shadow-lg">
                         <div id="seconds-ar" class="text-4xl sm:text-6xl font-display font-bold">00</div>
                         <div class="text-sm sm:text-lg mt-2 text-gem-sand font-body">ثوان</div>
                     </div>
                 </div>
-                <!-- رسالة "الافتتاح الآن" - مخفية مبدئيًا -->
                 <div id="open-msg-ar"
                     class="hidden text-3xl sm:text-5xl font-display font-bold text-green-400 animate-pulse">
                     حفل الافتتاح بدأ الآن!
                 </div>
             </section>
 
-            <!-- 
-              القسم الرئيسي (بالإنجليزية)
-            -->
             <section id="hero-en" lang="en" class="lang-block text-center animate-fade-in hidden">
                 <h1 class="text-5xl sm:text-7xl font-display font-extrabold text-gem-gold mb-4">The Grand Egyptian
                     Museum</h1>
                 <p class="text-2xl sm:text-3xl text-gem-ivory font-body mb-10">The Official Opening Ceremony is Tomorrow
                 </p>
 
-                <!-- العد التنازلي -->
                 <div id="countdown-en" class="flex justify-center space-x-3 sm:space-x-4 rtl:space-x-reverse mb-12">
-                    <!-- Days -->
                     <div class="border-2 border-gem-gold bg-gem-dark/30 p-4 sm:p-6 rounded-lg shadow-lg">
                         <div id="days-en" class="text-4xl sm:text-6xl font-display font-bold">00</div>
                         <div class="text-sm sm:text-lg mt-2 text-gem-sand font-body">Days</div>
                     </div>
-                    <!-- Hours -->
                     <div class="border-2 border-gem-gold bg-gem-dark/30 p-4 sm:p-6 rounded-lg shadow-lg">
                         <div id="hours-en" class="text-4xl sm:text-6xl font-display font-bold">00</div>
                         <div class="text-sm sm:text-lg mt-2 text-gem-sand font-body">Hours</div>
                     </div>
-                    <!-- Minutes -->
                     <div class="border-2 border-gem-gold bg-gem-dark/30 p-4 sm:p-6 rounded-lg shadow-lg">
                         <div id="minutes-en" class="text-4xl sm:text-6xl font-display font-bold">00</div>
                         <div class="text-sm sm:text-lg mt-2 text-gem-sand font-body">Minutes</div>
                     </div>
-                    <!-- Seconds -->
                     <div class="border-2 border-gem-gold bg-gem-dark/30 p-4 sm:p-6 rounded-lg shadow-lg">
                         <div id="seconds-en" class="text-4xl sm:text-6xl font-display font-bold">00</div>
                         <div class="text-sm sm:text-lg mt-2 text-gem-sand font-body">Seconds</div>
                     </div>
                 </div>
-                <!-- رسالة "الافتتاح الآن" - مخفية مبدئيًا -->
                 <div id="open-msg-en"
                     class="hidden text-3xl sm:text-5xl font-display font-bold text-green-400 animate-pulse">
                     The Ceremony is Live!
                 </div>
             </section>
 
-            <!-- فاصل زخرفي -->
             <div class="decorative-divider">
                 <svg viewBox="0 0 100 10" xmlns="http://www.w3.org/2000/svg">
                     <line x1="0" y1="5" x2="40" y2="5" />
@@ -235,28 +186,22 @@
                 </svg>
             </div>
 
-            <!-- 
-              قسم "ما المميز؟" (بالعربية)
-            -->
             <section id="special-ar" lang="ar" class="lang-block animate-fade-in" style="animation-delay: 200ms;">
                 <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-10">لماذا المتحف المصري الكبير؟
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center">
-                    <!-- ميزة 1 -->
                     <div
                         class="bg-gem-dark/30 border border-gem-gold/50 p-6 rounded-lg shadow-xl transition-all duration-300 hover:shadow-gold-glow hover:border-gem-gold">
                         <h3 class="text-2xl font-display font-bold mb-3 text-gem-gold">الأكبر في العالم</h3>
                         <p class="text-gem-ivory text-lg">أكبر متحف في العالم مخصص لحضارة واحدة، ويضم أكثر من 100,000
                             قطعة أثرية.</p>
                     </div>
-                    <!-- ميزة 2 -->
                     <div
                         class="bg-gem-dark/30 border border-gem-gold/50 p-6 rounded-lg shadow-xl transition-all duration-300 hover:shadow-gold-glow hover:border-gem-gold">
                         <h3 class="text-2xl font-display font-bold mb-3 text-gem-gold">كنوز توت عنخ آمون</h3>
                         <p class="text-gem-ivory text-lg">يحتوي على المجموعة الكاملة لكنوز الملك توت عنخ آمون (أكثر من
                             5000 قطعة) لأول مرة.</p>
                     </div>
-                    <!-- ميزة 3 -->
                     <div
                         class="bg-gem-dark/30 border border-gem-gold/50 p-6 rounded-lg shadow-xl transition-all duration-300 hover:shadow-gold-glow hover:border-gem-gold">
                         <h3 class="text-2xl font-display font-bold mb-3 text-gem-gold">أعجوبة معمارية</h3>
@@ -266,28 +211,22 @@
                 </div>
             </section>
 
-            <!-- 
-              قسم "ما المميز؟" (بالإنجليزية)
-            -->
             <section id="special-en" lang="en" class="lang-block hidden animate-fade-in"
                 style="animation-delay: 200ms;">
                 <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-10">Why The GEM?</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center">
-                    <!-- Feature 1 -->
                     <div
                         class="bg-gem-dark/30 border border-gem-gold/50 p-6 rounded-lg shadow-xl transition-all duration-300 hover:shadow-gold-glow hover:border-gem-gold">
                         <h3 class="text-2xl font-display font-bold mb-3 text-gem-gold">World's Largest</h3>
                         <p class="text-gem-ivory text-lg">The largest museum dedicated to a single civilization, with
                             over 100,000 artifacts.</p>
                     </div>
-                    <!-- Feature 2 -->
                     <div
                         class="bg-gem-dark/30 border border-gem-gold/50 p-6 rounded-lg shadow-xl transition-all duration-300 hover:shadow-gold-glow hover:border-gem-gold">
                         <h3 class="text-2xl font-display font-bold mb-3 text-gem-gold">Tut's Treasures</h3>
                         <p class="text-gem-ivory text-lg">Features the complete collection of King Tutankhamun (5,000+
                             pieces) for the first time.</p>
                     </div>
-                    <!-- Feature 3 -->
                     <div
                         class="bg-gem-dark/30 border border-gem-gold/50 p-6 rounded-lg shadow-xl transition-all duration-300 hover:shadow-gold-glow hover:border-gem-gold">
                         <h3 class="text-2xl font-display font-bold mb-3 text-gem-gold">Architectural Marvel</h3>
@@ -297,7 +236,6 @@
                 </div>
             </section>
 
-            <!-- فاصل زخرفي -->
             <div class="decorative-divider">
                 <svg viewBox="0 0 100 10" xmlns="http://www.w3.org/2000/svg">
                     <line x1="0" y1="5" x2="40" y2="5" />
@@ -307,13 +245,9 @@
                 </svg>
             </div>
 
-            <!-- 
-              قسم "المعارض" (بالعربية)
-            -->
             <section id="exhibits-ar" lang="ar" class="lang-block animate-fade-in" style="animation-delay: 400ms;">
                 <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-10">أبرز المعروضات</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                    <!-- كارت 1 -->
                     <div
                         class="bg-gem-dark/30 border border-gem-gold/50 rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-gold-glow hover:border-gem-gold">
                         <img src="./3.jpg" alt="قناع توت عنخ آمون" class="w-full h-48 object-cover">
@@ -323,7 +257,6 @@
                                 واحد.</p>
                         </div>
                     </div>
-                    <!-- كارت 2 -->
                     <div
                         class="bg-gem-dark/30 border border-gem-gold/50 rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-gold-glow hover:border-gem-gold">
                         <img src="./2.jpg" alt="الدرج العظيم" class="w-full h-48 object-cover">
@@ -333,7 +266,6 @@
                                 المصرية.</p>
                         </div>
                     </div>
-                    <!-- كارت 3 -->
                     <div
                         class="bg-gem-dark/30 border border-gem-gold/50 rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-gold-glow hover:border-gem-gold">
                         <img src="./1.jpg" alt="مركب خوفو" class="w-full h-48 object-cover">
@@ -346,14 +278,10 @@
                 </div>
             </section>
 
-            <!-- 
-              قسم "المعارض" (بالإنجليزية)
-            -->
             <section id="exhibits-en" lang="en" class="lang-block hidden animate-fade-in"
                 style="animation-delay: 400ms;">
                 <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-10">Featured Exhibits</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                    <!-- Card 1 -->
                     <div
                         class="bg-gem-dark/30 border border-gem-gold/50 rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-gold-glow hover:border-gem-gold">
                         <img src="./3.jpg" alt="Tutankhamun's Mask" class="w-full h-48 object-cover">
@@ -363,7 +291,6 @@
                                 displayed in one place.</p>
                         </div>
                     </div>
-                    <!-- Card 2 -->
                     <div
                         class="bg-gem-dark/30 border border-gem-gold/50 rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-gold-glow hover:border-gem-gold">
                         <img src="./2.jpg" alt="The Grand Staircase" class="w-full h-48 object-cover">
@@ -373,7 +300,6 @@
                                 Egyptian kings and gods.</p>
                         </div>
                     </div>
-                    <!-- Card 3 -->
                     <div
                         class="bg-gem-dark/30 border border-gem-gold/50 rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-gold-glow hover:border-gem-gold">
                         <img src="./1.jpg" alt="Khufu's Solar Boat" class="w-full h-48 object-cover">
@@ -386,7 +312,6 @@
                 </div>
             </section>
 
-            <!-- فاصل زخرفي -->
             <div class="decorative-divider">
                 <svg viewBox="0 0 100 10" xmlns="http://www.w3.org/2000/svg">
                     <line x1="0" y1="5" x2="40" y2="5" />
@@ -396,9 +321,6 @@
                 </svg>
             </div>
 
-            <!-- 
-              قسم "معلومات الزيارة" (بالعربية)
-            -->
             <section id="visit-ar" lang="ar" class="lang-block text-center animate-fade-in"
                 style="animation-delay: 600ms;">
                 <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-8">خطط لزيارتك (للجمهور)</h2>
@@ -414,9 +336,6 @@
                 </div>
             </section>
 
-            <!-- 
-              قسم "معلومات الزيارة" (بالإنجليزية)
-            -->
             <section id="visit-en" lang="en" class="lang-block text-center hidden animate-fade-in"
                 style="animation-delay: 600ms;">
                 <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-8">Plan Your Visit (Public)</h2>
@@ -433,11 +352,8 @@
             </section>
         </main>
 
-        <!-- الفوتر -->
         <footer class="text-center text-gem-sand mt-16 font-body">
-            <!-- فوتر عربي -->
             <p id="footer-ar" class="lang-block">© 2025 المتحف المصري الكبير. جميع الحقوق محفوظة.</p>
-            <!-- فوتر إنجليزي -->
             <p id="footer-en" class="lang-block hidden">© 2025 The Grand Egyptian Museum. All rights reserved.</p>
         </footer>
 
@@ -446,7 +362,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-            // --- منطق تبديل اللغة ---
             const langEnBtn = document.getElementById('lang-en-btn');
             const langArBtn = document.getElementById('lang-ar-btn');
             const allLangBlocks = document.querySelectorAll('.lang-block');
@@ -474,12 +389,9 @@
 
             langEnBtn.addEventListener('click', () => setLanguage('en'));
             langArBtn.addEventListener('click', () => setLanguage('ar'));
-            setLanguage('ar'); // البدء باللغة العربية
+            setLanguage('ar');
 
-            // --- منطق العد التنازلي ---
-
-            // تحديد وقت الافتتاح: 1 نوفمبر 2025، الساعة 10:00 صباحًا
-            const openingTime = new Date('2025-11-01T10:00:00'); // التاريخ من طلبك السابق
+            const openingTime = new Date('2025-11-01T10:00:00');
             const openingTimestamp = openingTime.getTime();
 
             const elements = {
@@ -517,7 +429,6 @@
 
                 const format = (num) => num.toString().padStart(2, '0');
 
-                // تحديث النص (مع التحقق من وجود العنصر أولاً)
                 if (elements.daysEn) elements.daysEn.textContent = format(days);
                 if (elements.hoursEn) elements.hoursEn.textContent = format(hours);
                 if (elements.minutesEn) elements.minutesEn.textContent = format(minutes);
